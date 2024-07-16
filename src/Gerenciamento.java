@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Gerenciamento {
     String tipoInstancia;
     ArrayList<Forma> formas = new ArrayList<>();
+    int contador = 0;
 
     public void addForma(Forma f) {
         formas.add(f);
@@ -19,7 +20,8 @@ public class Gerenciamento {
             } else if (f instanceof Triangulo) {
                 tipoInstancia = "Triângulo";
             }
-            System.out.println("\n" + tipoInstancia + "\n" + f.toString());
+            System.out.println(contador + ". " + tipoInstancia + "\n" + f.toString() + "\n");
+            contador++;
         }
     }
 
