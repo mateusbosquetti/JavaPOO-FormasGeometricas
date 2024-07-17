@@ -213,7 +213,7 @@ public class Main {
         int index = sc.nextInt();
         sc.nextLine();
 
-        if (g.existe(index) == false) {
+        if (!g.existe(index)) {
             System.out.println("Indice inexistente!");
         } else {
             int opcaoAtu = 0;
