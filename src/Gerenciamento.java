@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class Gerenciamento {
     String tipoInstancia;
     ArrayList<Forma> formas = new ArrayList<>();
-    int contador = 0;
 
     public void addForma(Forma f) {
         formas.add(f);
     }
 
     public void listarFormas() {
+        int contador = 0;
         for (Forma f : formas) {
             if (f instanceof Quadrado) {
                 tipoInstancia = "Quadrado";
@@ -23,6 +23,10 @@ public class Gerenciamento {
             System.out.println(contador + ". " + tipoInstancia + "\n" + f.toString() + "\n");
             contador++;
         }
+    }
+
+    public void atualizarForma(Forma f, int index) {
+        formas.set(index, f);
     }
 
     public void listarRetangulo() {
@@ -56,5 +60,21 @@ public class Gerenciamento {
             }
         }
     }
+
+    public Boolean vazio() { //True vazio
+        if (formas.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public Boolean existe(int index) { //False não existe
+        if (index >= formas.size()) {
+            return false;
+        }
+        return true;
+    }
+
 
 }

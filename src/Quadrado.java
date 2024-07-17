@@ -2,7 +2,6 @@ public class Quadrado extends Forma {
     private double lado;
 
     public Quadrado(double lado) {
-        super();
         this.lado = lado;
     }
 
